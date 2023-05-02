@@ -52,7 +52,7 @@ exports.verifyPayment = async (req, res) => {
     res.status(200).send({
       status: data.status,
       reference: data.reference,
-      amount: data.amount,
+      amount: data.amount / 100,
       paid_at: data.paid_at,
       currency: data.currency,
       plan: data.metadata.plan

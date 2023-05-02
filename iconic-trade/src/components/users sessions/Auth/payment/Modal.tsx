@@ -60,7 +60,7 @@ function Modal({ steps, handleStep }: Props) {
     amount: "",
   });
 
-  const newAmount = parseInt(formValues.amount);
+  const newAmount = parseInt(formValues.amount) * 100;
   // console.log(amount);
   const config = {
     reference: `${new Date().getTime()}`,
