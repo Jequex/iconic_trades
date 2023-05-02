@@ -29,10 +29,10 @@ connection.once("open", function() {
 //serve static assets in production
 if (process.env.NODE_ENV === 'production') {
     //set static folder
-    app.use(express.static('iconic-trade/.next'))
+    app.use(express.static('iconic-trade/dist'))
 
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'iconic-trade', '.next', 'server', 'pages'))
+        res.sendFile(path.resolve(__dirname, 'iconic-trade', 'dist', 'index.html'))
     })
 }
 
