@@ -7,11 +7,11 @@ const current = 'local';
 const inUse = current === 'dev' ? dev : 'local' ? local  : prod;
 
 export const endPoints = {
-  createAccountUrl: `/api/users/user`,
-  loginUrl: `/api/users/loginUser`,
-  googleLoginUrl: `${inUse}/users/googleAuth`,
-  userSubscriptionsUrl: `/api/payments/userSubscriptions`,
-  verifyPaymentUrl: `${inUse}/payments/verifyPayment`,
+  createAccountUrl: `/api/v1/users/user`,
+  loginUrl: `/api/v1/users/loginUser`,
+  googleLoginUrl: `/api/v1/users/googleAuth`,
+  userSubscriptionsUrl: `/api/v1/payments/userSubscriptions`,
+  verifyPaymentUrl: `/api/v1/payments/verifyPayment`,
 };
 
 
