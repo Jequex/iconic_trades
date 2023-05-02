@@ -10,7 +10,7 @@
     "client": "npm run dev --prefix iconic-trade",
     "client-install": "npm install --prefix iconic-trade",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix iconic-trade && npm run build --prefix iconic-trade"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix iconic-trade && npm run build --prefix iconic-trade && npm start --prefix iconic-trade"
   },
   "author": "jequex",
   "license": "ISC",
