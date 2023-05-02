@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('iconic-trade/build'))
 
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'iconic-trade', '.next', 'server', 'pages', '_app'))
+        res.sendFile(path.resolve(__dirname, 'iconic-trade', '.next', 'server', 'pages'))
     })
 }
 
