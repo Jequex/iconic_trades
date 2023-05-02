@@ -24,6 +24,16 @@ connection.once("open", function() {
   console.log("MongoDB database connection established successfully");
 });
 
+//serve static assets in production
+if (process.env.NODE_ENV === 'production') {
+    //set static folder
+    app.use(express.static('iconic-trades/build'))
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'iconic-trades', 'build', 'index.html'))
+    })
+}
+
 app.listen(port, () => {
   console.log(`app is listening at http://localhost:${port}`);
 });
