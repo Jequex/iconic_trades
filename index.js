@@ -26,7 +26,7 @@ connection.once("open", function() {
   console.log("MongoDB database connection established successfully");
 });
 
-//serve static assets in production
+//serve static assets in production 
 if (process.env.NODE_ENV === 'production') {
     //set static folder
     app.use(express.static('iconic-trade/dist'))
