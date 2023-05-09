@@ -6,9 +6,9 @@ type Props = {};
 
 function WorkSection({}: Props) {
   return (
-    <section className=" min-h-screen bg-[#faf8f4] w-full flex items-center justify-center">
-      <div className="max-w-screen-xl px-4 mx-auto">
-        <div className="text-slate-900 w-full  ">
+    <section className="panel min-h-screen relative bg-[#f1f1f3] w-full  flex items-end pb-6 px-4 md:pb-24">
+      <div className="max-w-screen-xl mx-auto w-full relative z-10 ">
+        <div className="text-slate-900 w-full bg-[rgba(241,241,243,0.6)] backdrop-blur rounded-sm shadow-md shadow-slate-800/40 p-4 md:p-6 max-w-prose  ">
           <h3 className="text-base uppercase text-slate-900 ">
             LET YOUR
             <span className="px-1 font-bold">FUNDS</span>
@@ -21,6 +21,13 @@ function WorkSection({}: Props) {
           </p>
         </div>
       </div>
+
+      <Image
+        src="/images/work.jpg"
+        alt=""
+        fill
+        className=" object-cover md:object-contain"
+      />
     </section>
   );
 }
